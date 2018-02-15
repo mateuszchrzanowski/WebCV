@@ -12,32 +12,32 @@
 		<header id="home">
 			<div class="container">
 				<div id="logo">
-					<img src="./img/logo.png" alt="MCh"/>
+					<a href="#home"><img src="./img/logo.png" alt="MCh"/></a>
 				</div>
 				<div id="welcome">
 					<h1>My name is Mateusz Chrzanowski.</br>Welcome to my <span id="cv_website">CV Website!</span></h1>
 				</div>
 				<div id="navigation">
 					<div class="nav_box">
-						<a href="#home">
+						<a href="#about">
 							<img src="img/icons/about.png" />
 							<p>About me</p>
 						</a>
 					</div>
 					<div class="nav_box">
-						<a href="#">
+						<a href="#edu_work">
 							<img src="img/icons/edu_work.png" />
 							<p>Education & Work</p>
 						</a>
 					</div>
 					<div class="nav_box">
-						<a href="#">
+						<a href="#coding">
 							<img src="img/icons/coding.png" />
 							<p>Coding</p>
 						</a>
 					</div>
 					<div class="nav_box">
-						<a href="#">
+						<a href="#hobby">
 							<img src="img/icons/hobby.png" />
 							<p>Hobby</p>
 						</a>
@@ -48,8 +48,8 @@
 		
 		<section id="about">
 			<div class="container">
-				<div id="about_txt">
-					<h1>About me</h1>
+				<div class="about_box" id="about_txt">
+					<h1>About me.</h1>
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 					<div id="social">
 						<a href="#"><img src="img/icons/fb.png" /></a>
@@ -57,13 +57,15 @@
 						<a href="#"><img src="img/icons/linkedin.png" /></a>
 					</div>
 				</div>
-				<img src="img/photo_1.jpg" id="photo_1" />
+				<div id="about_photo">
+					<img src="img/photo_1.jpg" />
+				</div>
 			</div>
 		</section>
 		
 		<section id="edu_work">
 			<div class="container">
-				<h1>Education & Work</h1>
+				<h1>Education & Work.</h1>
 				<div class="timeline left">
 					<div class="content">
 						<h3>September 2017 - Present</h3>
@@ -72,6 +74,7 @@
 					</div>
 				</div>
 				<div class="timeline right">
+				<!--<img src="img/photo_1.jpg" id="test_photo"/>-->
 					<div class="content">
 						<h3>October 2016 - September 2017</h3>
 						<h4>Nicolaus Copernicus University in Toruń</br>Postgraduate Course in Computer Programming and Application</h4>
@@ -85,32 +88,53 @@
 						<p>Technician</p>
 					</div>
 				</div>
+				<div class="timeline right">
+					<div class="content">
+						<h3>October 2010 - January 2015</h3>
+						<h4>Poznań University of Life Science</h4>
+						<p>Engineering in Biotechnology</p>
+					</div>
+				</div>
+				<div class="timeline left">
+					<div class="content">
+						<h3>October 2011 - December 2013</h3>
+						<h4>Adam Mickiewicz University in Poznań</h4>
+						<p>Master’s Degree in Environmental Biology</p>
+					</div>
+				</div>
 			</div>
 		</section>
 		
 		<section id="coding">
 			<div class="container">
-				<p>Some text</p>
+				<div id="coding_text">
+					<h1>Coding.</h1>
+					<p> sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in</p>
+				</div>
 				<div id="technologies">
 					<div class="tech_box">
-						<img class="tech_icon" />
-						<p>HTML5</p>
-						<p>Some text</p>
+						<img src="img/icons/html.png" />
+						<h4>HTML5</h4>
+						<div class="line"></div>
+						<p>Basic knowledge about HTML markup and ability of making simple websites</p>
 					</div>
 					<div class="tech_box">
-						<img class="tech_icon" />
-						<p>CSS3</p>
-						<p>Some text</p>
+						<img src="img/icons/css.png" />
+						<h4>CSS3</h4>
+						<div class="line"></div>
+						<p>Basic knowledge about CSS styling and bootstrap</p>
 					</div>
 					<div class="tech_box">
-						<img class="tech_icon" />
-						<p>Coding</p>
-						<p>Some text</p>
+						<img src="img/icons/csharp.png" />
+						<h4>C#</h4>
+						<div class="line"></div>
+						<p>Knowledge about language structure and ability of building simple console, WPF and UWP applications</p>
 					</div>
 					<div class="tech_box">
-						<img class="tech_icon" />
-						<p>Hobby</p>
-						<p>Some text</p>
+						<img src="img/icons/sql.png" />
+						<h4>SQL</h4>
+						<div class="line"></div>
+						<p>Knowledge about basic SQL transactions</p>
 					</div>
 				</div>
 			</div>
@@ -118,23 +142,42 @@
 		
 		<section id="hobby">
 			<div class="container">
+				<h1>Hobby.</h1>
 				<div class="hobby_box">
-					<img class="hobby_icon" />
-					<p>Basketball</p>
+					<img src="img/icons/basketball.png" />
+					<h4>Basketball</h4>
+					<div class="line"></div>
+					<p>I love play basketball and I am big fan of Boston Celtics</p>
 				</div>
 				<div class="hobby_box">
-					<img class="hobby_icon" />
-					<p>Guitar</p>
+					<img src="img/icons/guitar.png" />
+					<h4>Guitar</h4>
+					<div class="line"></div>
+					<p>Playing guitar and listening experimental music</p>
 				</div>
 				<div class="hobby_box">
-					<img class="hobby_icon" />
-					<p>Sci-Fi and Fantasy</p>
+					<img src="img/icons/wizard.png" />
+					<h4>Sci-Fi & Fantasy</h4>
+					<div class="line"></div>
+					<p>Games, movies, books...</p>
 				</div>
 			</div>
 		</section>
 		
 		<footer>
-			<p>Mateusz Chrzanowski, Copyright &copy; 2017</p>
+			<div class="container">
+				<div class="footer_div">
+					<p>Mateusz Chrzanowski, Copyright &copy; 2017</p>
+				</div>
+				<div class="footer_div">
+					<img id="minilogo" src="./img/logo.png" alt="MCh"/>
+				</div>
+				<div class="footer_div" id="footer_social">
+					<a href="#"><img src="img/icons/facebook_grey.png" /></a>
+					<a href="#"><img src="img/icons/github_grey.png" /></a>
+					<a href="#"><img src="img/icons/linkedin_grey.png" /></a>
+				</div>
+			</div>
 		</footer>
 	</body>
 </html>

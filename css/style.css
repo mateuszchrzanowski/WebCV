@@ -1,15 +1,20 @@
 /*GLOBAL*/
-*{
-	box-sizing: border-box;
-}
-
 body{
 	padding: 0;
-	margin: 0 auto;
+	margin: 0;
 	font-family: Calibri, Helvetica, sans-serif;
 	font-size: 20px;
+	color: #636363;
 	line-height: 1.5;
 	background-color: #C9C9C9;
+}
+
+h3{
+	color: #2C4E89;
+}
+
+h4{
+	color: #000000;
 }
 
 .container{
@@ -25,65 +30,61 @@ header{
 	background-position: 50% 50%;
 	color: #FFFFFF;
 	padding-top: 30px;
-	min-height: 70px;
+	min-height: 400px;
+	border-bottom: #0bdead 5px solid;
 }
 
-header .container{
+header #logo{
 	text-align: center;
 }
 
-#welcome h1{
+header #welcome{
+	margin-bottom: 60px;
+}
+
+header #welcome h1{
 	font-size: 40px;
 	margin-top: 20px;
 	font-weight: bold;
+	text-align: center;
 }
 
-#cv_website{
+header #cv_website{
 	color: #0bdead;
 }
 
-#navigation{
-	width: 100%;
+header #navigation .nav_box{
+	float: left;
+	width: 20%;
+	margin: 20px;
+	text-align: center;
 }
 
-#navigation .nav_box{
-	display: inline-block;
-	margin: 50px 70px 30px 70px;
-}
-
-#navigation .nav_box:hover{
+header #navigation .nav_box a:hover{
 	opacity: 0.5;
 }
-/*
-#navigation .nav_box p{
-	font-size: 14px;
-	text-transform: uppercase;
-}
-*/
 
-#navigation img{
-	width: 40px;
-}
-
-#navigation p{
-	font-size: 14px;
-	text-transform: uppercase;
-	padding-top: 15px;
-	margin: 0px;
-}
-
-#navigation a{
+header #navigation .nav_box a{
 	text-decoration: none;
+	text-transform: uppercase;
+	display: inline-block;
 	color: #ffffff;
 }
 
+header #navigation .nav_box img{
+	width: 60px;
+}
+
+header #navigation .nav_box p{
+	margin: 0;
+	font-size: 14px;
+	text-transform: uppercase;
+	padding-top: 15px;
+}
+
 /*ABOUT*/
-#about .container{
-	text-align: center;
+#about{
 	background: #ffffff;
-	width: 100%;
-	/*margin-top: 30px;*/
-	/*border-radius: 6px;*/
 }
 
 #about h1{
@@ -91,38 +92,50 @@ header .container{
 	color: #2C4E89;
 }
 
-#about_txt{
+#about .about_box{
 	float: left;
 	width: 50%;
 	margin: 10px;
-	padding: 25px;
+	text-align: center;
 }
 
-#social{
-	display: inline-block;
-}
-
-#social img{
+#about .about_box #social{
 	float: left;
-	width: 30px;
-	margin: 20px;
+	width: 100%;
+	margin: 10px;
 }
 
-#social img:hover{
+#about .about_box #social img{
+	width: 20px;
+	margin: 15px;
+}
+
+#about .about_box #social a{
+	text-align: center;
+	width: 100%;
+}
+
+#about .about_box #social img:hover{
 	opacity: 0.5;
 }
 
-#photo_1{
-	float: left;
-	/*width: 400px;*/
-	width: 30%;
-	margin: 60px 0px 0px 90px;
+#about #about_photo{
+	float: right;
+	margin-top: 100px;
+	margin-right: 20px;
+}
+
+#about #about_photo img{
+	width: 300px;
 	border-radius: 50%;
 }
 
 /*EDU_WORK*/
+#edu_work *{
+	box-sizing: border-box;
+}
+
 #edu_work{
-	margin-top: 30px;
 	position: relative;
 	margin: 0 auto;
 }
@@ -131,7 +144,7 @@ header .container{
 	font-size: 40px;
 	color: #2C4E89;
 	text-align: center;
-	margin-top: 70px;
+	margin-top: 40px;
 	margin-bottom: 40px;
 }
 
@@ -140,7 +153,7 @@ header .container{
     position: absolute;
     width: 6px;
     background-color: #2C4E89;
-    top: 175px;
+    top: 145px;
     bottom: 0;
     left: 50%;
     margin-left: -3px;
@@ -178,7 +191,6 @@ header .container{
 	left: -16px;
 }
 
-
 .content{
 	text-align: center;
 	padding: 20px 30px;
@@ -187,110 +199,120 @@ header .container{
     border-radius: 6px;
 }
 
+/*CODING*/
+#coding{
+	background: #ffffff;
+}
 
+#coding #coding_text{
+	text-align: center;
+}
 
+#coding h1{
+	font-size: 40px;
+	color: #2C4E89;
+}
 
+#coding #technologies .tech_box{
+	float: left;
+	width: 20%;
+	padding: 20px;
+	text-align: center;
+}
 
+#coding #technologies .tech_box img{
+	width: 70px;
+}
 
+#coding #technologies .tech_box p{
+	font-size: 16px;
+}
 
-/*
+#coding #technologies .tech_box .line{
+	height: 2px;
+	width: 50%;
+	margin: 0 25%;
+	background: #2C4E89;
+}
 
-#edu_work h1{
+/*HOBBY*/
+#hobby h1{
 	font-size: 40px;
 	color: #2C4E89;
 	text-align: center;
 }
 
-#edu_work .content{
+#hobby .hobby_box{
+	float: left;
+	width: 30%;
+	padding: 10px;
 	text-align: center;
-	background: #ffffff;
-	border-radius: 5%;
 }
 
-#edu_work h2::after{
-	content: "";
-	position: absolute;
-	left: 540px;
-	width: 25px;
-    height: 25px;
-	background-color: blue;
-	
+#hobby .hobby_box img{
+	width: 70px;
 }
 
-.left{
-	width: 45%;
-	margin-right: 53%;
+#hobby .hobby_box p{
+	font-size: 16px;
 }
 
-.left::after{
-	content: "";
-    position: absolute;
-    width: 6px;
-    background-color: #2C4E89;
-    top: 150;
-    bottom: 0;
-    left: 50%;
-    margin-left: -3px;
-}
-
-.right{
-	margin-left: 53%;
-	width: 45%;
-}
-
-*/
-
-
-
-/*
-#edu_work{
-	max-width: 1200px;
-}
-
-
-#edu_work::after{
-	content: "sdfsad";
-	position: absolute;
-	width: 6px;
-	background-color: #2C4E89;
-	top: 0;
-	bottom: 0;
-	left: 50%;
-	margin-left: -3px;
-}
-
-.content{
-	padding: 10px 40px;
-	position: relative;
-	background-color: #ffffff;
+#hobby .hobby_box .line{
+	height: 2px;
 	width: 50%;
-
+	margin: 0 25%;
+	background: #2C4E89;
 }
 
-.content::after{
-	content: "";
-	position: absolute;
-	width: 25px;
-	height: 25px;
-	right: -17px;
-	background-color: #0bdead;
-	border-radius: 50%;
-	top: 15px;
-	z-index: 1;
+/*FOOTER*/
+footer{
+	margin-top: 30px;
+	background: #000000;
 }
 
-.left{
-	left: 0;
+footer p{
+	font-size: 16px;
+	margin: 0;
+	color: #C9C9C9;
 }
 
-.right{
-	left: 50%;
+footer .footer_div{
+	float: left;
+	width: 30%;
+	margin: 10px;
+	text-align: center;
 }
 
-.right::after{
-	left: -16px;
+footer .footer_div p{
+	margin-top: 25px;
 }
-*/
+
+footer .footer_div #minilogo{
+	width: 90px;
+}
+
+footer #footer_social{
+	float: left;
+	width: 30%;
+	margin-top: 20px;
+	text-align: center;
+}
+
+footer #footer_social img{
+	width: 20px;
+	margin: 15px;
+}
+
+footer #footer_social a{
+	text-align: center;
+}
+
+footer #footer_social img:hover{
+	opacity: 0.5;
+}
+
+/* commit -m 'more css styling' */
+
 
 
 
