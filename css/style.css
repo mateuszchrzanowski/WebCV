@@ -62,6 +62,7 @@ header #navigation .nav_box{
 
 header #navigation .nav_box a:hover{
 	opacity: 0.5;
+	transform: scale(1.1);
 }
 
 header #navigation .nav_box a{
@@ -72,12 +73,12 @@ header #navigation .nav_box a{
 }
 
 header #navigation .nav_box img{
-	width: 60px;
+	width: 50px;
 }
 
 header #navigation .nav_box p{
 	margin: 0;
-	font-size: 14px;
+	font-size: 13px;
 	text-transform: uppercase;
 	padding-top: 15px;
 }
@@ -117,11 +118,12 @@ header #navigation .nav_box p{
 
 #about .about_box #social img:hover{
 	opacity: 0.5;
+	transform: scale(1.3);
 }
 
 #about #about_photo{
 	float: right;
-	margin-top: 100px;
+	margin-top: 50px;
 	margin-right: 20px;
 }
 
@@ -160,7 +162,7 @@ header #navigation .nav_box p{
 }
 
 .timeline{
-	padding: 10px 30px;
+	padding: 10px 10px;
 	margin: 30px 0px;
     position: relative;
     width: 50%;
@@ -193,10 +195,20 @@ header #navigation .nav_box p{
 
 .content{
 	text-align: center;
-	padding: 20px 30px;
+	padding: 10px 10px;
     background-color: #ffffff;
     position: relative;
     border-radius: 6px;
+}
+
+.content h3,
+.content h4{
+	font-size: 18px;
+	margin: 10px;
+}
+
+.content p{
+	font-size: 16px;
 }
 
 /*CODING*/
@@ -204,7 +216,7 @@ header #navigation .nav_box p{
 	background: #ffffff;
 }
 
-#coding #coding_text{
+#coding #coding_txt{
 	text-align: center;
 }
 
@@ -268,10 +280,11 @@ header #navigation .nav_box p{
 footer{
 	margin-top: 30px;
 	background: #000000;
+	border-top: #0bdead 5px solid;
 }
 
 footer p{
-	font-size: 16px;
+	font-size: 12px;
 	margin: 0;
 	color: #C9C9C9;
 }
@@ -283,12 +296,22 @@ footer .footer_div{
 	text-align: center;
 }
 
-footer .footer_div p{
+footer #footer_copyrights{
 	margin-top: 25px;
+}
+
+footer #footer_copyrights span{
+	color: #ffffff;
 }
 
 footer .footer_div #minilogo{
 	width: 90px;
+	opacity: 0.4;
+}
+
+footer .footer_div #minilogo:hover{
+	opacity: 1;
+	transform: scale(1.1);
 }
 
 footer #footer_social{
@@ -309,7 +332,146 @@ footer #footer_social a{
 
 footer #footer_social img:hover{
 	opacity: 0.5;
+	transform: scale(1.3);
 }
+
+/*MEDIA QUERIES*/
+@media (max-width: 768px){
+	header #logo,
+	header #welcome,
+	#about .about_box,
+	#coding #technologies .tech_box,
+	#hobby .hobby_box,
+	footer .footer_div{
+		float: none;
+		text-align: center;
+		width: 100%;
+		padding: 0;
+	}
+	
+	header #logo img{
+		width: 150px;
+	}
+	
+	header #welcome h1,
+	#about #about_txt h1,
+	#edu_work h1,
+	#coding #coding_txt h1,
+	#hobby h1{
+		font-size: 25px;
+	}
+	
+	header #cv_website{
+		display: block;
+	}
+	
+	header #navigation{
+		width: 100%;
+		text-align: center;
+		margin-bottom: 20px;
+	}
+	
+	header #navigation .nav_box{
+		display: inline-block;
+		float: none;
+		margin: 5px;
+	}
+	
+	header #navigation .nav_box a{
+		text-align: center;
+	}
+	
+	header #navigation .nav_box img{
+		width: 30px;
+	}
+	
+	header #navigation .nav_box p{
+		display: none;
+	}
+	
+	#about .about_box{
+		margin: 0;
+	}
+	
+	#about #about_txt p,
+	#coding #coding_txt p{
+		font-size: 16px;
+	}
+	
+	#about #about_photo,
+	#about #about_txt #social{
+		float: none;
+		text-align: center;
+		display: block;
+		margin: 0;
+	}
+	
+	#about #about_photo img{
+		width: 200px;
+		margin-bottom: 20px;
+	}
+	
+	#edu_work::after{
+		left: 18.1%;
+	}
+	
+	#edu_work .content{
+		width: 80%;
+		padding: 20px;
+		margin: 0;
+	}
+	
+	.left::after, .right::after {
+		left: -15px;
+	}
+	
+	.right,
+	.left{
+		left: 10%;
+		width: 100%;
+	}
+	
+	#coding #technologies .tech_box h4,
+	#coding #technologies .tech_box p,
+	#hobby .hobby_box h4,
+	#hobby .hobby_box p{
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+	
+	#coding #technologies .tech_box h4,
+	#hobby .hobby_box h4{
+		font-size: 18;
+	}
+	
+	#coding #technologies .tech_box,
+	#hobby .hobby_box{
+		margin-bottom: 20px;
+	}
+	
+	footer .footer_div{
+		margin: 0;
+	}
+	
+	footer #footer_social{
+		float: none;
+		width: 100%;
+		margin: 0;
+		text-align: center;
+	}
+}
+
+@media (max-width: 1000px){
+	
+}
+
+
+
+
+
+
+
+
 
 /* commit -m 'more css styling' */
 
