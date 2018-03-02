@@ -1,4 +1,9 @@
 /*GLOBAL*/
+html {
+    scroll-behavior: smooth
+}
+
+
 body{
 	padding: 0;
 	margin: 0;
@@ -55,14 +60,21 @@ header #cv_website{
 
 header #navigation .nav_box{
 	float: left;
-	width: 20%;
-	margin: 20px;
+	width: 21%;
+	margin: 2%;
 	text-align: center;
 }
 
 header #navigation .nav_box a:hover{
 	opacity: 0.5;
 	transform: scale(1.1);
+	-webkit-transition: opacity 0.3s ease-in-out;
+	-moz-transition: opacity 0.3s ease-in-out;
+	transition: opacity 0.3s ease-in-out;
+}
+
+header #navigation .nav_box a:focus{
+	transform: translateY(3px);
 }
 
 header #navigation .nav_box a{
@@ -96,14 +108,14 @@ header #navigation .nav_box p{
 #about .about_box{
 	float: left;
 	width: 50%;
-	margin: 10px;
+	margin: 1%;
 	text-align: center;
 }
 
 #about .about_box #social{
 	float: left;
 	width: 100%;
-	margin: 10px;
+	margin: 1%;
 }
 
 #about .about_box #social img{
@@ -119,17 +131,25 @@ header #navigation .nav_box p{
 #about .about_box #social img:hover{
 	opacity: 0.5;
 	transform: scale(1.3);
+	-webkit-transition: opacity 0.2s ease-in-out;
+	-moz-transition: opacity 0.2s ease-in-out;
+	transition: opacity 0.2s ease-in-out;
 }
 
 #about #about_photo{
 	float: right;
-	margin-top: 50px;
-	margin-right: 20px;
+	margin-top: 70px;
+	margin-bottom: 70px;
+	margin-right: 5%;
 }
 
 #about #about_photo img{
 	width: 300px;
 	border-radius: 50%;
+}
+
+#about #about_photo #my_photo:hover{
+	content: url(../img/photo_22.jpg);
 }
 
 /*EDU_WORK*/
@@ -189,6 +209,32 @@ header #navigation .nav_box p{
 	left: 50%;
 }
 
+.content:hover{
+	
+}
+
+.arrow{
+	color: #2C4E89;
+	font-weight: bold;
+}
+
+.more_info{
+	display: none;
+}
+
+.left:hover, .right:hover{
+	background: #0bdead;
+	cursor: pointer;
+}
+
+.left:hover .arrow, .right:hover .arrow{
+	color: #0bdead;
+}
+
+.left:focus .more_info, .right:focus .more_info{
+	display: block;
+}
+
 .right::after{
 	left: -16px;
 }
@@ -227,8 +273,9 @@ header #navigation .nav_box p{
 
 #coding #technologies .tech_box{
 	float: left;
-	width: 20%;
-	padding: 20px;
+	width: 21%;
+	height: 150px;
+	padding: 2%;
 	text-align: center;
 }
 
@@ -237,14 +284,33 @@ header #navigation .nav_box p{
 }
 
 #coding #technologies .tech_box p{
-	font-size: 16px;
+	font-size: 14px;
+	display: none;
 }
 
+/*
 #coding #technologies .tech_box .line{
 	height: 2px;
 	width: 50%;
 	margin: 0 25%;
 	background: #2C4E89;
+	display: none;
+}
+*/
+
+#coding #technologies .tech_box:hover{
+	transform: scale(1.1);
+	-webkit-transition: opacity 0.3s ease-in-out;
+	-moz-transition: opacity 0.3s ease-in-out;
+	transition: opacity 0.3s ease-in-out;
+}
+
+#coding #technologies .tech_box:hover p{
+	display: block;
+}
+
+#coding #technologies .tech_box:hover h4{
+	display: none;
 }
 
 /*HOBBY*/
@@ -256,15 +322,48 @@ header #navigation .nav_box p{
 
 #hobby .hobby_box{
 	float: left;
-	width: 30%;
-	padding: 10px;
+	width: 31%;
+	padding: 1%;
 	text-align: center;
+}
+
+#hobby .hobby_box a{
+	text-decoration: none;
+	display: inline-block;
+}
+
+
+#hobby .hobby_box a:hover img{
+	transform: scale(1.1);
+	-webkit-transition: opacity 0.3s ease-in-out;
+	-moz-transition: opacity 0.3s ease-in-out;
+	transition: opacity 0.3s ease-in-out;
+}
+
+
+#hobby .hobby_box a:hover h4{
+	visibility: visible;
 }
 
 #hobby .hobby_box img{
 	width: 70px;
 }
 
+#hobby .hobby_box h4{
+	margin: 0;
+	padding-top: 10px;
+	visibility: hidden;
+}
+
+/*
+#hobby .hobby_box:hover{
+	cursor: pointer;
+}
+*/
+
+
+
+/*
 #hobby .hobby_box p{
 	font-size: 16px;
 }
@@ -275,10 +374,70 @@ header #navigation .nav_box p{
 	margin: 0 25%;
 	background: #2C4E89;
 }
+*/
+
+#hobby .popup{
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(0, 0, 0, 0.7);
+	-webkit-transition: opacity 0.2s ease-in-out;
+	-moz-transition: opacity 0.2s ease-in-out;
+	transition: opacity 0.2s ease-in-out;
+	visibility: hidden;
+	opacity: 0;
+	z-index: 1;
+}
+
+#hobby .popup:target{
+	visibility: visible;
+	opacity: 1;
+}
+
+.popup_content{
+	margin: 50px auto;
+	padding: 20px;
+	background: #ffffff;
+	border-radius: 10px;
+	width: 70%;
+	position: relative;
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+}
+
+.popup_content h4{
+	margin-top: 0;
+}
+
+.popup_content .popup_close{
+	position: absolute;
+	top: 20px;
+	right: 30px;
+	font-size: 25px;
+	font-weight: bold;
+	text-decoration: none;
+	color: #000000;
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+}
+
+.popup_content .popup_close:hover{
+	color: #0bdead;
+}
+
+.popup_content .popup_txt{
+	font-size: 16px;
+	max-height: 50%;
+	overflow: auto;
+}
 
 /*FOOTER*/
 footer{
-	margin-top: 30px;
+	margin-top: 10px;
 	background: #000000;
 	border-top: #0bdead 5px solid;
 }
@@ -291,8 +450,8 @@ footer p{
 
 footer .footer_div{
 	float: left;
-	width: 30%;
-	margin: 10px;
+	width: 31%;
+	margin: 1%;
 	text-align: center;
 }
 
@@ -333,15 +492,83 @@ footer #footer_social a{
 footer #footer_social img:hover{
 	opacity: 0.5;
 	transform: scale(1.3);
+	-webkit-transition: opacity 0.2s ease-in-out;
+	-moz-transition: opacity 0.2s ease-in-out;
+	transition: opacity 0.2s ease-in-out;
+}
+
+#top{
+	position: fixed;
+	bottom: 1em;
+	right: 1em;
+}
+
+#top img{
+	width: 40px;
+}
+
+#top:hover{
+	opacity: 0.5;
+	transform: scale(1.1);
+	-webkit-transition: opacity 0.2s ease-in-out;
+	-moz-transition: opacity 0.2s ease-in-out;
+	transition: opacity 0.2s ease-in-out;
+}
+
+#top:focus{
+	transform: translateY(3px);
 }
 
 /*MEDIA QUERIES*/
+@media (max-width: 1150px){
+	#coding #technologies .tech_box{
+		padding: 0;
+		width: 25%;
+	}
+	#coding #technologies .tech_box img{
+	}
+}
+
+@media (max-width: 1000px){
+	#about .about_box{
+		float: none;
+		text-align: center;
+		width: 100%;
+		padding: 0;
+		margin: 0;
+	}
+	
+	/*#about #about_txt h1{
+		font-size: 25px;
+	}*/
+	
+	/*#about #about_txt p{
+		font-size: 16px;
+	}*/
+	
+	#about #about_photo,
+	#about #about_txt #social{
+		float: none;
+		text-align: center;
+		display: block;
+		margin: 0;
+	}
+	
+	#about #about_photo img{
+		margin-bottom: 20px;
+	}
+}
+
 @media (max-width: 768px){
+	header #home{
+		height: 490px;
+	}
+	
 	header #logo,
 	header #welcome,
-	#about .about_box,
-	#coding #technologies .tech_box,
-	#hobby .hobby_box,
+	/*#about .about_box,*/
+	/*#coding #technologies .tech_box,*/
+	/*#hobby .hobby_box,*/
 	footer .footer_div{
 		float: none;
 		text-align: center;
@@ -398,13 +625,13 @@ footer #footer_social img:hover{
 		font-size: 16px;
 	}
 	
-	#about #about_photo,
+	/*#about #about_photo,
 	#about #about_txt #social{
 		float: none;
 		text-align: center;
 		display: block;
 		margin: 0;
-	}
+	}*/
 	
 	#about #about_photo img{
 		width: 200px;
@@ -431,22 +658,46 @@ footer #footer_social img:hover{
 		width: 100%;
 	}
 	
+	#coding #technologies .tech_box{
+		text-align: center;
+		width: 25%;
+		padding: 0;
+		margin: 0;
+		margin-top: 30px;
+	}
+	
+	#coding #technologies .tech_box img,
+	#hobby .hobby_box img{
+		width: 50px;
+	}
+	
 	#coding #technologies .tech_box h4,
 	#coding #technologies .tech_box p,
-	#hobby .hobby_box h4,
-	#hobby .hobby_box p{
-		margin-top: 10px;
-		margin-bottom: 10px;
+	#hobby .hobby_box h4{
+		margin-top: 5px;
 	}
 	
 	#coding #technologies .tech_box h4,
 	#hobby .hobby_box h4{
-		font-size: 18;
+		font-size: 14px;
 	}
 	
-	#coding #technologies .tech_box,
+	#coding #technologies .tech_box p{
+		font-size: 12px;
+	}
+	
+	/*#coding #technologies .tech_box{
+		margin-bottom: 0;
+	}
+	*/
+	
 	#hobby .hobby_box{
-		margin-bottom: 20px;
+		text-align: center;
+		width: 33.3%;
+		padding: 0;
+		margin: 0;
+		margin-top: 20px;
+		margin-bottom: 10px;
 	}
 	
 	footer .footer_div{
@@ -459,10 +710,47 @@ footer #footer_social img:hover{
 		margin: 0;
 		text-align: center;
 	}
+	
+	#top{
+	position: fixed;
+	bottom: 0.5em;
+	right: 0.5em;
+	}
+
+	#top img{
+		width: 30px;
+	}
 }
 
-@media (max-width: 1000px){
+@media (max-width: 530px){
+	#coding #technologies .tech_box,
+	#hobby .hobby_box{
+		float: none;
+		text-align: center;
+		width: 50%;
+		padding: 0;
+		margin: 0 auto;
+	}
 	
+	#hobby .hobby_box{
+		margin-bottom: 25px;
+	}
+	
+	#coding #technologies .tech_box img,
+	#hobby .hobby_box img{
+		width: 70px;
+	}
+	
+	#coding #technologies .tech_box h4,
+	#hobby .hobby_box h4{
+		font-size: 18px;
+	}
+}
+
+@media (max-width: 440px){
+	header #navigation .nav_box{
+		margin: 0;
+	}
 }
 
 
