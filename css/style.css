@@ -138,18 +138,18 @@ header #navigation .nav_box p{
 
 #about #about_photo{
 	float: right;
+	background-image: url(../img/photo_1.jpg);
+	width: 300px;
+	height: 300px;
 	margin-top: 70px;
 	margin-bottom: 70px;
 	margin-right: 5%;
-}
-
-#about #about_photo img{
-	width: 300px;
+	background-size: contain;
 	border-radius: 50%;
 }
 
-#about #about_photo #my_photo:hover{
-	content: url(../img/photo_22.jpg);
+#about #about_photo:hover{
+	background-image: url(../img/photo_2.jpg);
 }
 
 /*EDU_WORK*/
@@ -276,6 +276,7 @@ header #navigation .nav_box p{
 	width: 21%;
 	height: 150px;
 	padding: 2%;
+	margin-bottom: 40px;
 	text-align: center;
 }
 
@@ -287,16 +288,6 @@ header #navigation .nav_box p{
 	font-size: 14px;
 	display: none;
 }
-
-/*
-#coding #technologies .tech_box .line{
-	height: 2px;
-	width: 50%;
-	margin: 0 25%;
-	background: #2C4E89;
-	display: none;
-}
-*/
 
 #coding #technologies .tech_box:hover{
 	transform: scale(1.1);
@@ -340,7 +331,6 @@ header #navigation .nav_box p{
 	transition: opacity 0.3s ease-in-out;
 }
 
-
 #hobby .hobby_box a:hover h4{
 	visibility: visible;
 }
@@ -354,27 +344,6 @@ header #navigation .nav_box p{
 	padding-top: 10px;
 	visibility: hidden;
 }
-
-/*
-#hobby .hobby_box:hover{
-	cursor: pointer;
-}
-*/
-
-
-
-/*
-#hobby .hobby_box p{
-	font-size: 16px;
-}
-
-#hobby .hobby_box .line{
-	height: 2px;
-	width: 50%;
-	margin: 0 25%;
-	background: #2C4E89;
-}
-*/
 
 #hobby .popup{
 	position: fixed;
@@ -401,7 +370,7 @@ header #navigation .nav_box p{
 	padding: 20px;
 	background: #ffffff;
 	border-radius: 10px;
-	width: 70%;
+	width: 50%;
 	position: relative;
 	-webkit-transition: all 0.2s ease-in-out;
 	-moz-transition: all 0.2s ease-in-out;
@@ -409,7 +378,7 @@ header #navigation .nav_box p{
 }
 
 .popup_content h4{
-	margin-top: 0;
+	margin-top: 20px;
 }
 
 .popup_content .popup_close{
@@ -429,10 +398,31 @@ header #navigation .nav_box p{
 	color: #0bdead;
 }
 
+
+.popup_content img{
+	width: 50px;
+}
+
+
 .popup_content .popup_txt{
-	font-size: 16px;
+	font-size: 18px;
 	max-height: 50%;
 	overflow: auto;
+}
+
+.popup_content .popup_txt a{
+	font-weight: bold;
+	color: #2C4E89;
+	text-decoration: none;
+}
+
+.popup_content .popup_txt a:hover{
+	color: #0bdead;
+}
+
+.popup_content .popup_txt span{
+	font-weight: bold;
+	color: #000000;
 }
 
 /*FOOTER*/
@@ -457,6 +447,10 @@ footer .footer_div{
 
 footer #footer_copyrights{
 	margin-top: 25px;
+}
+
+footer #footer_copyrights a{
+	text-decoration: none;
 }
 
 footer #footer_copyrights span{
@@ -538,23 +532,15 @@ footer #footer_social img:hover{
 		margin: 0;
 	}
 	
-	/*#about #about_txt h1{
-		font-size: 25px;
-	}*/
-	
-	/*#about #about_txt p{
-		font-size: 16px;
-	}*/
-	
 	#about #about_photo,
 	#about #about_txt #social{
 		float: none;
 		text-align: center;
 		display: block;
-		margin: 0;
+		margin: 0 auto;
 	}
 	
-	#about #about_photo img{
+	#about #about_photo{
 		margin-bottom: 20px;
 	}
 }
@@ -566,9 +552,6 @@ footer #footer_social img:hover{
 	
 	header #logo,
 	header #welcome,
-	/*#about .about_box,*/
-	/*#coding #technologies .tech_box,*/
-	/*#hobby .hobby_box,*/
 	footer .footer_div{
 		float: none;
 		text-align: center;
@@ -625,16 +608,9 @@ footer #footer_social img:hover{
 		font-size: 16px;
 	}
 	
-	/*#about #about_photo,
-	#about #about_txt #social{
-		float: none;
-		text-align: center;
-		display: block;
-		margin: 0;
-	}*/
-	
-	#about #about_photo img{
+	#about #about_photo{
 		width: 200px;
+		height: 200px;
 		margin-bottom: 20px;
 	}
 	
@@ -685,11 +661,6 @@ footer #footer_social img:hover{
 	#coding #technologies .tech_box p{
 		font-size: 12px;
 	}
-	
-	/*#coding #technologies .tech_box{
-		margin-bottom: 0;
-	}
-	*/
 	
 	#hobby .hobby_box{
 		text-align: center;
