@@ -276,6 +276,16 @@ header #navigation .nav_box p{
 	color: #2C4E89;
 }
 
+#coding a{
+	font-weight: bold;
+	color: #2C4E89;
+	text-decoration: none;
+}
+
+#coding a:hover{
+	color: #0bdead;
+}
+
 #coding #technologies .tech_box{
 	float: left;
 	width: 21%;
