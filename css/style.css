@@ -512,6 +512,7 @@ footer #footer_social img:hover{
 	transition: opacity 0.2s ease-in-out;
 }
 
+/*BACK-TO-TOP BUTTON*/
 #back_to_top{
 	position: fixed;
 	bottom: 1em;
