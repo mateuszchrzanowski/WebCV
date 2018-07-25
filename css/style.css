@@ -379,6 +379,7 @@ header #navigation .nav_box p{
 	visibility: hidden;
 	opacity: 0;
 	z-index: 1;
+	overflow: auto;
 }
 
 #hobby .popup:target{
@@ -719,7 +720,7 @@ footer #footer_social img:hover{
 	}
 }
 
-@media (max-width: 530px){
+@media (max-width: 570px){
 	#coding #technologies .tech_box,
 	#hobby .hobby_box{
 		float: none;
@@ -727,6 +728,16 @@ footer #footer_social img:hover{
 		width: 50%;
 		padding: 0;
 		margin: 0 auto;
+	}
+	
+	#coding #technologies .tech_box{
+		margin: 0;
+		width: 100%;
+	}
+	
+	#coding #technologies .tech_box p{
+		padding-left: 10px;
+		padding-right: 10px;
 	}
 	
 	#hobby .hobby_box{
