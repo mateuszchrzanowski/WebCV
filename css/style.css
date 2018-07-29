@@ -379,7 +379,6 @@ header #navigation .nav_box p{
 	visibility: hidden;
 	opacity: 0;
 	z-index: 1;
-	overflow: auto;
 }
 
 #hobby .popup:target{
@@ -393,7 +392,9 @@ header #navigation .nav_box p{
 	background: #ffffff;
 	border-radius: 10px;
 	width: 50%;
+	max-height: 75%;
 	position: relative;
+	overflow: auto;
 	-webkit-transition: all 0.2s ease-in-out;
 	-moz-transition: all 0.2s ease-in-out;
 	transition: all 0.2s ease-in-out;
@@ -760,3 +761,16 @@ footer #footer_social img:hover{
 		margin: 0;
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
