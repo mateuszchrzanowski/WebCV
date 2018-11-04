@@ -330,71 +330,56 @@ header #navigation .nav_box p{
 	grid-template-rows: repeat(2, 1fr);
 	grid-gap: 20px;
 	width: 100%;
-	/*height: 400px;*/
-	padding: 2rem;
-	max-width: 835px;
+	padding: 1rem;
+	max-width: 935px;
 	margin: 0 auto;
+	margin-bottom: 30px;
+	margin-top: 15px;
 	text-align: center;
-	/*min-height: 500px;*/
 }
 
 .project_box{
-    /*border: 1px solid #C9C9C9;
-	border-radius: 10px;*/
 	display: flex;
     justify-content: center;
     align-content: center;
     flex-direction: column;
 	text-decoration: none;
-	/*height: 200px;*/
-	/*width: 100%;*/
-	/*max-width: 290px;*/
-	/*min-height: 70px;*/
+	position: relative;
 }
 
-/*
-.project_box h4{
-	color: #636363;
+.project_txt{
+	color: #ffffff;
 	font-size: 20px;
 	margin: 0;
-}
-*/
-
-#webcv_project{
-	grid-column: 1/3;
-	text-align: center;
-	/*background: url("../img/webcv.png");
-	background-size: cover;
-	background-position: center center;
-	background-repeat: no-repeat;*/
-}
-
-#nba_project{
-	grid-column: 3/5;
-	text-align: center;
-	/*background: url("../img/nba.png");
-	background-size: cover;
-	background-position: center center;
-	background-repeat: no-repeat;*/
-}
-
-#bn_project{
-	grid-column: 2/4;
-	text-align: center;
-	/*background: url("../img/bn.png");
-	background-size: cover;
-	background-position: center center;
-	background-repeat: no-repeat;*/
-}
-
-#webcv_project img, #nba_project img, #bn_project img{
-	max-width: 100%;
-	max-height: 100%;
-	border-radius: 10px;
+	font-weight: bold;
+	margin-bottom: 3rem;
 }
 
 .overlay{
-	
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 100%;
+	width: 100%;
+	-webkit-transition-duration: 0.5s;
+	-moz-transition-duration: 0.5s;
+	transition-duration: 0.5s;
+	background-color: #2C4E89;
+	border-radius: 10px;
+	opacity: 0;
+}
+
+.overlay_content{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 75%;
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	text-align: center;
 }
 
 .project_btn{
@@ -410,36 +395,38 @@ header #navigation .nav_box p{
 	-webkit-transition-duration: 0.4s;
 	-moz-transition-duration: 0.4s;
 	transition-duration: 0.4s;
+	white-space: nowrap;
+}
+
+.project_box:hover .overlay{
+	opacity: 1;
 }
 
 .project_btn:hover{
 	background: #0bdead;
 }
 
-/*
-#coding #technologies .tech_box p{
-	font-size: 14px;
-	display: none;
+#webcv_project{
+	grid-column: 1/3;
+	text-align: center;
 }
 
-
-#coding #technologies .tech_box:hover{
-	-webkit-transform: scale(1.1);
-	-moz-transform: scale(1.1);
-	transform: scale(1.1);
-	-webkit-transition: opacity 0.3s ease-in-out;
-	-moz-transition: opacity 0.3s ease-in-out;
-	transition: opacity 0.3s ease-in-out;
+#nba_project{
+	grid-column: 3/5;
+	text-align: center;
 }
 
-#coding #technologies .tech_box:hover p{
+#bn_project{
+	grid-column: 2/4;
+	text-align: center;
+}
+
+#webcv_project img, #nba_project img, #bn_project img{
+	max-width: 100%;
+	max-height: 100%;
+	border-radius: 10px;
 	display: block;
 }
-
-#coding #technologies .tech_box:hover h4{
-	display: none;
-}
-*/
 
 /*HOBBY*/
 #hobby h1{
@@ -459,7 +446,6 @@ header #navigation .nav_box p{
 	text-decoration: none;
 	display: inline-block;
 }
-
 
 #hobby .hobby_box a:hover img{
 	-webkit-transform: scale(1.1);
@@ -571,17 +557,11 @@ footer{
 	margin-top: 10px;
 	background: #000000;
 	border-top: #0bdead 5px solid;
-	height: 200px;
+	height: 250px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
-
-/*
-footer .container{
-	height: 300px;
-}
-*/
 
 footer p{
 	font-size: 12px;
@@ -670,6 +650,27 @@ footer #footer_social img:hover{
 }
 
 /*MEDIA QUERIES*/
+@media (min-width: 1440px){
+	#projects_grid{
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: repeat(1, 1fr);
+		grid-gap: 10px;
+		max-width: 1400px;
+	}
+	
+	#webcv_project{
+		grid-column: 1/2;
+	}
+	
+	#nba_project{
+		grid-column: 2/3;
+	}
+	
+	#bn_project{
+		grid-column: 3/4;
+	}
+}
+
 @media (max-width: 1150px){
 	#coding #technologies .tech_box{
 		padding: 0;
@@ -724,7 +725,7 @@ footer #footer_social img:hover{
 	#edu_work h1,
 	#coding #coding_txt h1,
 	#hobby h1{
-		font-size: 25px;
+		font-size: 28px;
 	}
 	
 	header #cv_website{
@@ -790,41 +791,39 @@ footer #footer_social img:hover{
 		width: 100%;
 	}
 	
-	#coding #technologies .tech_box{
+	#technologies{
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(2, 1fr);
+		margin-top: 25px;
+	}
+	
+	.tech_box{
+		float: none;
 		text-align: center;
-		width: 25%;
-		padding: 0;
-		margin: 0;
-		margin-top: 30px;
+		margin: 0 auto;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
 	}
 	
-	#coding #technologies .tech_box img,
-	#hobby .hobby_box img{
-		width: 50px;
-	}
-	
-	#coding #technologies .tech_box h4,
-	#coding #technologies .tech_box p,
-	#hobby .hobby_box h4{
-		margin-top: 5px;
-	}
-	
-	#coding #technologies .tech_box h4,
-	#hobby .hobby_box h4{
-		font-size: 14px;
-	}
-	
-	#coding #technologies .tech_box p{
-		font-size: 12px;
-	}
-	
-	#hobby .hobby_box{
-		text-align: center;
-		width: 33.3%;
-		padding: 0;
-		margin: 0;
-		margin-top: 20px;
+	.tech_box img{
+		display: block;
 		margin-bottom: 10px;
+	}
+	
+	#projects_header{
+		font-size: 24px;
+	}
+	
+	#projects_grid{
+		grid-template-columns: repeat(1, 1fr);
+		grid-template-rows: repeat(3, 1fr);
+	}
+
+	#webcv_project, #nba_project, #bn_project{
+		grid-column: 1/2;
 	}
 	
 	footer .footer_div{
@@ -849,44 +848,36 @@ footer #footer_social img:hover{
 	}
 }
 
-@media (max-width: 570px){
-	#coding #technologies .tech_box,
-	#hobby .hobby_box{
-		float: none;
-		text-align: center;
-		width: 50%;
-		padding: 0;
-		margin: 0 auto;
-	}
-	
-	#coding #technologies .tech_box{
-		margin: 0;
-		width: 100%;
-	}
-	
-	#coding #technologies .tech_box p{
-		padding-left: 10px;
-		padding-right: 10px;
-	}
-	
-	#hobby .hobby_box{
-		margin-bottom: 25px;
-	}
-	
-	#coding #technologies .tech_box img,
-	#hobby .hobby_box img{
-		width: 70px;
-	}
-	
-	#coding #technologies .tech_box h4,
+@media (max-width: 550px){
 	#hobby .hobby_box h4{
-		font-size: 18px;
+		font-size: 16px;
 	}
 }
 
 @media (max-width: 440px){
 	header #navigation .nav_box{
 		margin: 0;
+	}
+	
+	#coding #technologies .tech_box img,
+	#hobby .hobby_box img{
+		width: 50px;
+	}
+	
+	#coding #technologies .tech_box h4{
+		font-size: 16px;
+	}
+	
+	.project_txt{
+		font-size: 15px;
+		margin-bottom: 1rem;
+	}
+	
+	.project_btn{
+		border: 2px solid #0bdead;
+		border-radius: 30px;
+		padding: 12px 24px;
+		font-size: 14px;
 	}
 }
 
