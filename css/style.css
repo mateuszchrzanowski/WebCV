@@ -355,7 +355,7 @@ header #navigation .nav_box p{
 	margin-bottom: 3rem;
 }
 
-.overlay{
+.project_box > .overlay{
 	position: absolute;
 	top: 0;
 	bottom: 0;
@@ -369,6 +369,7 @@ header #navigation .nav_box p{
 	background-color: #2C4E89;
 	border-radius: 10px;
 	opacity: 0;
+	visibility: hidden;
 }
 
 .overlay_content{
@@ -398,8 +399,9 @@ header #navigation .nav_box p{
 	white-space: nowrap;
 }
 
-.project_box:hover .overlay{
+.project_box:hover > .overlay{
 	opacity: 1;
+	visibility: visible;
 }
 
 .project_btn:hover{
